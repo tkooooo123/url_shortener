@@ -6,10 +6,16 @@
             </div>
             <img src="https://assets-lighthouse.alphacamp.co/uploads/image/file/16716/ExportedContentImage_00.png"
                 class="card-img-top" style="width: 17rem;" alt="...">
-            <form action="/urls" method="POST">
+            <form action="/url" method="GET">
                 <div class="mb-3 m-3 text-center">
-                    <input class="form-control " type="url" placeholder="請輸入網址" name="name" required>
-                    <button class="btn btn-secondary m-2" type="submit" class="">Shorten</button>
+                    <ul>
+                        {{#each urls}}
+                        <li>
+                            {{this.name}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    <button class="btn btn-primary m-2" type="submit" class="">Copy</button>
                 </div>
             </form>
         </div>
