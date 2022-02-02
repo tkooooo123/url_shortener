@@ -34,7 +34,7 @@ app.get('/url', (req,res) => {
 app.post('/urls', (req,res) => {
     const name = req.body.name
     return URL.create({name})
-    .then(() => res.redirect('/url'))
+    .then(() => res.render('show', {name}))
     .catch(error => console.log(error))
 })
 
