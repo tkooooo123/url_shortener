@@ -23,7 +23,6 @@ router.get('/url/:id', (req, res) => {
     URL.findById(id)
     .lean()
     .then(data => {
-        console.log(data)
         const short_url = `http://localhost:3000/${data.shortUrl}`
         res.render('show', {url, short_url})
     })
