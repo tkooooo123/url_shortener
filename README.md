@@ -21,7 +21,7 @@
    ```
    成功則顯示
    ```Bash
-   Express is listening on localhost:3000
+   Express is listening on http://localhost:3000
    ```
 5. 打開瀏覽器，輸入以下網址即可瀏覽：
    ```Bash
